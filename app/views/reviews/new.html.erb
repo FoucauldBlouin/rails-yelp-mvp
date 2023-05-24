@@ -1,0 +1,15 @@
+<%= form_with(model: [@restaurant, @review], local: true) do |form| %>
+  <div>
+    <%= form.label :rating %>
+    <%= form.number_field :rating, in: 0..5 %>
+  </div>
+
+  <div>
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
